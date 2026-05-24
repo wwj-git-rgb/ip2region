@@ -1,0 +1,566 @@
+# Instincts generated from https://github.com/wwj-git-rgb/ip2region
+# Generated: 2026-05-24T12:15:35.682Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: ip2region-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Commit Length
+
+## Action
+
+Keep commit messages concise (~40 characters)
+
+## Evidence
+
+- Average commit message length: 40 chars
+- Based on 100 commits
+
+---
+id: ip2region-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: ip2region-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: ip2region-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: ip2region-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Test Naming
+
+## Action
+
+Name test files using the pattern: *Test.cs
+
+## Evidence
+
+- File pattern: *Test.cs
+- Consistent across test files
+
+---
+id: ip2region-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: **/*.test.*
+
+---
+id: ip2region-workflow-add-new-language-binding
+trigger: "when doing add new language binding"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Add New Language Binding
+
+## Action
+
+Follow the add-new-language-binding workflow:
+1. Create new directory under binding/<language>/
+2. Add core implementation files (e.g., ip2Region.*)
+3. Add test/example files (e.g., testSearcher.*, main.*, Program.cs)
+4. Add or update README.md for the new binding
+5. Update top-level README.md to mention the new binding
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: binding/<language>/*, binding/<language>/README.md, binding/<language>/ip2Region.*
+
+---
+id: ip2region-workflow-update-ip-database
+trigger: "when doing update ip database"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Update Ip Database
+
+## Action
+
+Follow the update-ip-database workflow:
+1. Replace data/ip.merge.txt with new version
+2. Replace data/ip2region.db with new version
+3. Commit with a message referencing the new data version
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: data/ip.merge.txt, data/ip2region.db
+
+---
+id: ip2region-workflow-fix-or-improve-language-binding
+trigger: "when doing fix or improve language binding"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Fix Or Improve Language Binding
+
+## Action
+
+Follow the fix-or-improve-language-binding workflow:
+1. Edit implementation file(s) for the binding (e.g., ip2region.js, ip2Region.py, Ip2Region.class.php, ip2Region.go)
+2. Edit or add test/example files (e.g., testSearcher.*, ip2region.spec.js, ip2Region_test.go)
+3. Update README.md for the binding if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: binding/<language>/*, binding/<language>/ip2Region.*, binding/<language>/testSearcher.*
+
+---
+id: ip2region-workflow-update-or-fix-readme
+trigger: "when doing update or fix readme"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Update Or Fix Readme
+
+## Action
+
+Follow the update-or-fix-readme workflow:
+1. Edit README.md in root or binding/<language>/README.md
+2. Commit with a message referencing documentation or README
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, binding/<language>/README.md
+
+---
+id: ip2region-workflow-merge-external-contribution
+trigger: "when doing merge external contribution"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/ip2region
+---
+
+# Ip2region Workflow Merge External Contribution
+
+## Action
+
+Follow the merge-external-contribution workflow:
+1. Merge branch or pull request
+2. Update relevant files (implementation, tests, docs)
+3. Commit with a merge message referencing the contributor
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: * (varies, but often includes binding/<language>/*, README.md, data/*)
+
+---
+id: ip2region-instinct-file-naming
+trigger: "When creating or renaming source code files"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Files like Ip2Region.csproj, Ip2RegionMaker.csproj
+
+---
+id: ip2region-instinct-function-naming
+trigger: "When defining a function or method"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: ip2region-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: ip2region-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: ip2region-instinct-import-style
+trigger: "When importing modules in code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: ip2region-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: ip2region-instinct-test-file-pattern
+trigger: "When creating test files for C# code"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Test File Pattern
+
+## Action
+
+Name test files with the pattern *Test.cs
+
+## Evidence
+
+- Pattern in testing.filePattern
+- Files like IP2RegionMaker.Test.csproj
+
+---
+id: ip2region-instinct-unit-tests
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Unit Tests
+
+## Action
+
+Write unit tests for core functionality
+
+## Evidence
+
+- testing.testTypes includes unit
+- Files like testSearcher.py, ip2region.spec.js
+
+---
+id: ip2region-instinct-test-location
+trigger: "When adding test files"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Test Location
+
+## Action
+
+Place test files mixed with source files (not in a separate test folder)
+
+## Evidence
+
+- architecture.folderStructure.testLocation: mixed
+- Files like binding/python3/testSearcher.py
+
+---
+id: ip2region-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Commit Format
+
+## Action
+
+Use a short, freeform message; optionally prefix with type (e.g., fix:, feat:, chore:), but not required
+
+## Evidence
+
+- commits.examples show both prefixed and unprefixed messages
+- No strict prefix enforcement
+
+---
+id: ip2region-instinct-merge-commit-format
+trigger: "When merging a pull request or branch"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Merge Commit Format
+
+## Action
+
+Use commit messages starting with 'Merge pull request' or 'Merge branch'
+
+## Evidence
+
+- commits.examples: Merge pull request #11 from zhuangya/jest
+- Merge branch 'master'...
+
+---
+id: ip2region-instinct-add-language-binding
+trigger: "When someone wants to add support for a new language binding"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Add Language Binding
+
+## Action
+
+Create a new directory under binding/<language>/, add implementation, test/example, and README files, and update the top-level README.md
+
+## Evidence
+
+- Workflow: add-new-language-binding
+- Example commits and files in workflow description
+
+---
+id: ip2region-instinct-update-ip-database
+trigger: "When someone wants to update the IP region data"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Update Ip Database
+
+## Action
+
+Replace data/ip.merge.txt and data/ip2region.db with new versions and commit with a message referencing the new data version
+
+## Evidence
+
+- Workflow: update-ip-database
+- Example commits and files in workflow description
+
+---
+id: ip2region-instinct-fix-or-improve-binding
+trigger: "When someone wants to fix a bug or improve an existing language binding"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Fix Or Improve Binding
+
+## Action
+
+Edit implementation and/or test/example files for the binding and update the binding's README.md if needed
+
+## Evidence
+
+- Workflow: fix-or-improve-language-binding
+- Example commits and files in workflow description
+
+---
+id: ip2region-instinct-update-readme
+trigger: "When someone wants to fix or update documentation in README.md files"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Update Readme
+
+## Action
+
+Edit README.md in root or binding/<language>/README.md and commit with a message referencing documentation or README
+
+## Evidence
+
+- Workflow: update-or-fix-readme
+- Example commits and files in workflow description
+
+---
+id: ip2region-instinct-merge-external-contribution
+trigger: "When someone wants to integrate changes from a fork or external contributor"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/ip2region
+---
+
+# Ip2region Instinct Merge External Contribution
+
+## Action
+
+Merge the branch or pull request, update relevant files, and commit with a merge message referencing the contributor
+
+## Evidence
+
+- Workflow: merge-external-contribution
+- Example commits and files in workflow description
+
